@@ -1,0 +1,153 @@
+/* v1.1
+22/12/21
+5:55pm */
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'chirp-normal';
+    src: url('../fonts/chirp-regular-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chirp-bold';
+    src: url('../fonts/chirp-bold-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chirp-heavy';
+    src: url('../fonts/chirp-heavy-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'apple-normal';
+    src: url('../fonts/SF-Pro.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'apple-bold';
+    src: url('../fonts/SF-Pro-Display-Bold.otf') format('opentype');
+}
+
+:root{
+    --default-normal: 'chirp-normal';
+    --default-heavy: 'chirp-heavy';
+    --default-bold: 'chirp-bold';
+    --apple-normal: 'apple-normal';
+    --apple-heavy: 'apple-heavy';
+    --apple-bold: 'apple-bold';
+    --tt-blue: #1D9BF0;
+    --tt-blue-onhover: #148cd8;
+    --default-link-gray: #0F1419;
+    --white-box-onhover: rgb(15, 20, 25, 0.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+ /* VERTICAL NAVBAR CONFIG */
+
+nav.vertical{
+    display: flex;
+    margin-left: 170px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav.vertical .logo-icon{
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+nav.vertical .logo-icon img{
+    width: 32px;
+}
+
+nav.vertical .nav-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: flex-start;
+}
+
+nav.vertical .nav-list-container .main-page{ 
+    font-family: var(--apple-bold);
+}
+
+nav.vertical .nav-list-container a{
+    display: flex;
+    color: var(--default-link-gray);
+    font: normal 1.25rem var(--apple-normal);
+    padding: 14px;
+    gap: 20px;
+}
+
+nav.vertical .nav-list-container a:hover{
+    background-color: var(--white-box-onhover);
+    border-radius: 9999px;
+}
+
+nav.vertical .nav-list-container  a i{
+    font-size: 1.5rem;
+    width: 27px;
+    height: 24px;
+    display: inline-block;
+    text-align: center;
+}
+
+nav.vertical .nav-list-container  a span{
+    padding-right: 15px;
+}
+
+nav.vertical .tweet-compose-link-container{
+    background-color: var(--tt-blue);
+    display: flex;
+    color: #fff;
+    width: 223px;
+    height: 50px;
+    border-radius: 9999px; 
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0;
+    transition: all .25s ease;
+}
+
+nav.vertical .tweet-compose-link-container:hover{
+    background-color: var(--tt-blue-onhover);
+}
+
+nav.vertical .tweet-compose-link-container span{
+    font: normal 1.05rem var(--apple-bold); 
+    
+}
+
+ /* HORIZONTAL NAVBAR CONFIG */
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1295px){
+
+}
