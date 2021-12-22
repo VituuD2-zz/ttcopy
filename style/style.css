@@ -1,0 +1,112 @@
+/* v1.0
+22/12/21
+4:10am */
+
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'chirp-normal';
+    src: url('../fonts/chirp-regular-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chirp-bold';
+    src: url('../fonts/chirp-bold-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chirp-heavy';
+    src: url('../fonts/chirp-heavy-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'apple-normal';
+    src: url('../fonts/SF-Pro.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'apple-bold';
+    src: url('../fonts/SF-Pro-Display-Bold.otf') format('opentype');
+}
+
+:root{
+    --default-normal: 'chirp-normal';
+    --default-heavy: 'chirp-heavy';
+    --default-bold: 'chirp-bold';
+    --apple-normal: 'apple-normal';
+    --apple-heavy: 'apple-heavy';
+    --apple-bold: 'apple-bold';
+    --tt-blue: #1D9BF0;
+    --default-link-gray: #0F1419;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header{
+    display: flex;
+    margin-left: 180px;
+    flex-direction: column;
+    gap: 20px;
+
+}
+header.vertical .logo-icon{
+    margin-top: 10px;
+}
+
+header.vertical .logo-icon img{
+    width: 33px;
+}
+
+header.vertical ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+header.vertical ul li a{
+    display: flex;
+    color: var(--default-link-gray);
+    font: normal 1.2rem var(--default-normal);
+    gap: 20px;
+}
+
+header.vertical ul li a i{
+    font-size: 1.5rem;
+    width: 27px;
+    height: 24px;
+    display: inline-block;
+    text-align: center;
+}
+
+header.vertical ul li a span{
+    margin-left: 20px;
+    margin-right: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1295px){
+
+}
