@@ -1,0 +1,311 @@
+/* v1.2
+23/12/21
+1:50am */
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'chirp-normal';
+    src: url('../fonts/chirp-regular-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chirp-bold';
+    src: url('../fonts/chirp-bold-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chirp-heavy';
+    src: url('../fonts/chirp-heavy-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'apple-normal';
+    src: url('../fonts/SF-Pro.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'apple-bold';
+    src: url('../fonts/SF-Pro-Display-Bold.otf') format('opentype');
+}
+
+:root{
+    --default-normal: 'chirp-normal', Helvetica, Arial, sans-serif;
+    --default-heavy: 'chirp-heavy', Helvetica, Arial, sans-serif;
+    --default-bold: 'chirp-bold', Helvetica, Arial, sans-serif;
+    --apple-normal: 'apple-normal', Helvetica, Arial, sans-serif;
+    --apple-heavy: 'apple-heavy', Helvetica, Arial, sans-serif;
+    --apple-bold: 'apple-bold', Helvetica, Arial, sans-serif;
+    --tt-blue: #1D9BF0;
+    --tt-blue-light-hover: #1d9bf01a;
+    --tt-blue-dark-hover: #148cd8;
+    --default-link-gray: #0F1419;
+    --white-box-hover: #0f14191a;
+    --default-light-gray: #536471;
+    --separator-default-gray: #eff3f4;
+    --white-box-light-hover: #f7f9f9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+ /* VERTICAL NAVBAR CONFIG */
+
+nav.vertical{
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 170px;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    /* LOGO */
+
+nav.vertical .logo-icon{
+    margin-top: 2px;
+    margin-left: 2px;
+    padding: 10px;
+    border-radius: 100px;
+    line-height: 12px;
+}
+
+nav.vertical .logo-icon:hover{
+    background-color: var(--tt-blue-light-hover);
+}
+
+nav.vertical .logo-icon img{
+    max-width: 32px;
+    height: 32px;
+}
+
+    /* NAVBAR LIST */
+
+nav.vertical .nav-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: flex-start;
+}
+
+nav.vertical .nav-list-container .main-page{ 
+    font-family: var(--apple-bold);
+}
+
+nav.vertical .nav-list-container a{
+    display: flex;
+    color: var(--default-link-gray);
+    font: normal 1.25rem var(--apple-normal);
+    padding: 14px;
+    gap: 20px;
+}
+
+nav.vertical .nav-list-container a:hover{
+    background-color: var(--white-box-hover);
+    border-radius: 9999px;
+}
+
+nav.vertical .nav-list-container  a i{
+    font-size: 1.5rem;
+    width: 27px;
+    height: 24px;
+    display: inline-block;
+    text-align: center;
+}
+
+nav.vertical .nav-list-container  a span{
+    padding-right: 15px;
+}
+
+    /* TWEET BUTTON */
+
+nav.vertical .tweet-compose-link-container{
+    background-color: var(--tt-blue);
+    display: flex;
+    color: #fff;
+    width: 223px;
+    height: 50px;
+    border-radius: 9999px; 
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0;
+    transition: all .25s ease;
+}
+
+nav.vertical .tweet-compose-link-container:hover{
+    background-color: var(--tt-blue-dark-hover);
+}
+
+nav.vertical .tweet-compose-link-container span{
+    font: normal 1.05rem var(--apple-bold);   
+}
+
+    /* ACCOUNT SETTINGS */
+
+.acc-settings-container{
+    display: flex;
+    margin-top: 40%;
+    gap: 12px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 9999px;
+    background-color: #fff;
+}
+
+nav.vertical .acc-settings-container:hover{
+    background-color: var(--white-box-hover);
+}
+
+nav.vertical .acc-settings-container .acc-img{
+    margin-top: 2px;
+}
+
+nav.vertical .acc-settings-container .acc-img img{
+    border-radius: 99999px;
+    width: 40px;
+    height: 40px;
+}
+
+nav.vertical .acc-settings-container .acc-namenat{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+nav.vertical .acc-settings-container .acc-namenat .name{
+    font: bold 0.88rem var(--apple-normal);
+}
+
+nav.vertical .acc-settings-container .acc-namenat .at{
+    font: normal 0.9rem var(--default-normal);
+    color: var(--default-light-gray);
+}
+
+nav.vertical .acc-settings-container .dots{
+    margin-left: 75px;
+    align-self: center;
+}
+
+/* POP-UP CONFIG */
+
+.acc-switcher-p-u{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+    top: -100%;
+    margin-left: -1%;
+    background-color: #fff;
+}
+
+.acc-switcher-p-u.active{
+    top: 64%;
+}
+
+    /* POP-UP ACCOUNT SETTINGS */
+
+nav.vertical .acc-switcher-p-u .acc-settings-container-p-u{
+    display: flex;
+    gap: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: inherit;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav.vertical .acc-switcher-p-u .acc-settings-container-p-u .acc-img-p-u{
+    margin-top: 2px;
+}
+
+nav.vertical .acc-switcher-p-u .acc-settings-container-p-u .acc-img-p-u img{
+    border-radius: 99999px;
+    width: 48px;
+    height: 48px;
+}
+
+nav.vertical .acc-switcher-p-u .acc-settings-container-p-u .acc-namenat-p-u{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 8px;
+}
+
+nav.vertical .acc-switcher-p-u .acc-settings-container-p-u .acc-namenat-p-u .name{
+    font: bold 0.88rem var(--apple-normal);
+}
+
+nav.vertical .acc-switcher-p-u .acc-settings-container-p-u .acc-namenat-p-u .at{
+    font: normal 0.9rem var(--default-normal);
+    color: var(--default-light-gray);
+}
+
+nav.vertical .acc-switcher-p-u .acc-settings-container-p-u .check-p-u{
+    margin-left: 110px;
+    align-self: center;
+    color: var(--tt-blue);
+}
+
+    /* SEPARATOR */
+
+nav.vertical .acc-switcher-p-u .separator{
+    background-color: var(--separator-default-gray);
+    height: 1px;
+}
+    /* SEPARATOR */
+    /* POP-UP LINKS */
+
+nav.vertical .acc-switcher-p-u a{
+    font: normal 0.9rem var(--default-normal);
+    color: var(--default-link-gray);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+nav.vertical .acc-switcher-p-u a:hover{
+    background-color: var(--white-box-light-hover);
+    border-radius: 0px 0px 6px 6px;
+}
+
+nav.vertical .acc-switcher-p-u .add-acc-p-u{
+
+}
+
+nav.vertical .acc-switcher-p-u .logout-p-u{
+
+}
+
+/* HORIZONTAL NAVBAR CONFIG */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1295px){
+
+}
