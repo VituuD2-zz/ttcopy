@@ -1,6 +1,6 @@
-/* v1.3
-23/12/21
-11:35am */
+/* v1.5
+24/12/21
+4:15am */
 
 @charset "UTF-8";
 
@@ -54,26 +54,34 @@
     list-style-type: none;
 }
 
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
 
  /* VERTICAL NAVBAR CONFIG */
 
 nav.vertical{
-    position: fixed;
+    position: absolute;
     display: flex;
-    align-items: flex-start;
     margin-left: 170px;
     flex-direction: column;
-    gap: 8px;
+    width: 263px;
+
+    justify-content: flex-start;
 }
 
     /* LOGO */
 
 nav.vertical .logo-icon{
-    margin-top: 2px;
-    margin-left: 2px;
-    padding: 10px;
     border-radius: 100px;
-    line-height: 12px;
+    width: 52px;
+    height: 52px;
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav.vertical .logo-icon:hover{
@@ -81,7 +89,7 @@ nav.vertical .logo-icon:hover{
 }
 
 nav.vertical .logo-icon img{
-    max-width: 32px;
+    width: 32px;
     height: 32px;
 }
 
@@ -90,21 +98,25 @@ nav.vertical .logo-icon img{
 nav.vertical .nav-list-container{
     display: flex;
     flex-direction: column;
-    gap: 7px;
-    align-items: flex-start;
+    align-items: flex-start;    
+    margin-top: 2px;
+    margin-bottom: 4px;
 }
 
-nav.vertical .nav-list-container .main-page{ 
-    font-family: var(--apple-bold);
+.main-page{ 
+    font-family: var(--default-bold);
 }
 
 nav.vertical .nav-list-container a{
     display: flex;
     color: var(--default-link-gray);
-    font: normal 1.25rem var(--apple-normal);
-    padding: 14px;
-    gap: 20px;
+    font: normal 1.25rem var(--default-normal);
+    padding: 16px 14px;
 }
+
+/* nav.vertical .nav-list-container .home-{
+    padding-top: 12.5px;
+} */
 
 nav.vertical .nav-list-container a:hover{
     background-color: var(--white-box-hover);
@@ -113,14 +125,15 @@ nav.vertical .nav-list-container a:hover{
 
 nav.vertical .nav-list-container  a i{
     font-size: 1.5rem;
-    width: 27px;
-    height: 24px;
+    width: 26.25px;
+    height: 26.25px;
     display: inline-block;
     text-align: center;
 }
 
 nav.vertical .nav-list-container  a span{
-    padding-right: 15px;
+    margin-right: 16px;
+    margin-left: 20px;
 }
 
     /* TWEET BUTTON */
@@ -130,11 +143,11 @@ nav.vertical .tweet-compose-link-container{
     display: flex;
     color: #fff;
     width: 223px;
-    height: 50px;
+    height: 51px;
     border-radius: 9999px; 
     justify-content: center;
     align-items: center;
-    margin: 12px 0;
+    margin: 3px 0;
     transition: all .25s ease;
 }
 
@@ -143,14 +156,14 @@ nav.vertical .tweet-compose-link-container:hover{
 }
 
 nav.vertical .tweet-compose-link-container span{
-    font: normal 1.05rem var(--apple-bold);   
+    font: bold 1.05rem var(--apple-bold);   
 }
 
     /* ACCOUNT SETTINGS */
 
 .acc-settings-container{
     display: flex;
-    margin-top: 40%;
+    margin-top: 93px;
     gap: 12px;
     cursor: pointer;
     padding: 10px 15px;
@@ -162,14 +175,11 @@ nav.vertical .acc-settings-container:hover{
     background-color: var(--white-box-hover);
 }
 
-nav.vertical .acc-settings-container .acc-img{
-    margin-top: 2px;
-}
-
 nav.vertical .acc-settings-container .acc-img img{
     border-radius: 99999px;
     width: 40px;
     height: 40px;
+    margin-top: 4px;
 }
 
 nav.vertical .acc-settings-container .acc-namenat{
@@ -180,7 +190,7 @@ nav.vertical .acc-settings-container .acc-namenat{
 }
 
 nav.vertical .acc-settings-container .acc-namenat .name{
-    font: bold 0.88rem var(--apple-normal);
+    font: bold 0.94rem var(--default-normal);
 }
 
 nav.vertical .acc-settings-container .acc-namenat .at{
@@ -189,27 +199,28 @@ nav.vertical .acc-settings-container .acc-namenat .at{
 }
 
 nav.vertical .acc-settings-container .dots{
-    margin-left: 75px;
+    margin-left: 77px;
     align-self: center;
+    font-size: 0.88rem;
 }
 
 /* POP-UP CONFIG */
 
 .acc-switcher-p-u{
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     padding-top: 12px;
     padding-bottom: 12px;
     box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px;
-    top: -100%;
-    margin-left: -1%;
+    bottom: -100%;
     background-color: #fff;
+    transition: all .08s ease-in;
 }
 
 .acc-switcher-p-u.active{
-    top: 64%;
+    bottom: 11%;
 }
 
     /* POP-UP ACCOUNT SETTINGS */
@@ -279,16 +290,45 @@ nav.vertical .acc-switcher-p-u a:hover{
     border-radius: 0px 0px 6px 6px;
 }
 
-nav.vertical .acc-switcher-p-u .add-acc-p-u{
+/* MAIN CONTENT CONFIG */
 
+main.main-content{
+    width: 74vw;
+    display: flex;
+    position: sticky;
+    margin-left: 434px;
+    height: 100vh;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
-nav.vertical .acc-switcher-p-u .logout-p-u{
-
+main.main-content .center-content{
+    width: 40vw;
+    height: inherit;
+    display: flex;
 }
 
-/* HORIZONTAL NAVBAR CONFIG */
+main.main-content .center-content .center-content-topbar{
+    position: sticky;
+    top: 0;
+    width: inherit;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 19px;
+}
 
+main.main-content .page-title{
+    font-size: 1.25rem ;
+    color: var(--default-link-gray);
+}
+
+main.main-content .fire-icon{
+    font-size: 1.25rem;
+    margin-right: 4%;
+    color: var(--default-link-gray);
+}
 
 
 
