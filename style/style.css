@@ -1,6 +1,6 @@
-/* v1.6
-27/12/21
-7:34pm */
+/* v1.7
+28/12/21
+2:20am */
 
 @charset "UTF-8";
 
@@ -92,6 +92,7 @@ nav.vertical{
     height: 100%;
     padding: 0 12px;
     justify-content: space-between;
+    background-color: #fff;
 }
 
     /* LOGO */
@@ -201,7 +202,7 @@ nav.vertical .tweet-compose-link-container .text-container span{
     /* ACCOUNT SETTINGS */
 
 .acc-settings-container{
-    display: none;
+    display: flex;
     cursor: pointer;
     margin: 12px 0;
     border-radius: 9999px;
@@ -236,7 +237,7 @@ nav.vertical .acc-settings-container .acc-set-inside-container .acc-namenat{
 }
 
 nav.vertical .acc-settings-container .acc-set-inside-container .acc-namenat span .name{
-    font: 700 14px var(--default-normal);
+    font: 700 15px var(--default-normal);
     line-height: 20px;
 }
 
@@ -256,110 +257,146 @@ nav.vertical .acc-settings-container .acc-set-inside-container .dots{
 
     /* JS ACTION */
 
-.acc-switcher-p-u.active{
-    bottom: 11%;
+.acc-switcher-container.active{
+    display: flex;
 }
 
-    /* POP-UP CONFIG */
+     /* POP UP CONFIG */
 
-div.acc-switcher-p-u{
-    position: relative;
-    display: flex;
+div.acc-switcher-container{
+    position: absolute;
+    display: none;
+    min-width: 260px;
+    max-width: 360px;
+    min-height: 30px;
+    max-height: 480px;
+    width: 300px;
+    bottom: 86px;
+    left: -12px;
     flex-direction: column;
     border-radius: 20px;
-    padding-top: 12px;
-    padding-bottom: 12px;
     box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px;
-    /* bottom: -100%; */
     background-color: #fff;
-    transition: all .08s ease-in;
+}
+
+@keyframes anima{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.active .acc-switcher-p-u{
+    animation: anima .4s ease-in-out;
+}
+
+div.acc-switcher-container .acc-switcher-p-u{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
 }
 
 /* POP-UP ACCOUNT SETTINGS */
 
-div.acc-switcher-p-u .acc-settings-container-p-u{
+div.acc-switcher-container .acc-settings-container-p-u{
     display: flex;
-    gap: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: inherit;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 12px 16px;
 }
 
-div.acc-switcher-p-u .acc-settings-container-p-u .acc-img-p-u{
-    margin-top: 2px;
+div.acc-switcher-container .tospace-container{
+    display: flex;
+    justify-content: space-between;
 }
 
-div.acc-switcher-p-u .acc-settings-container-p-u .acc-img-p-u img{
-    border-radius: 99999px;
+div.acc-switcher-container .acc-img-p-u{
+    margin-right: 12px;
     width: 48px;
     height: 48px;
 }
 
-div.acc-switcher-p-u .acc-settings-container-p-u .acc-namenat-p-u{
+div.acc-switcher-container .acc-img-p-u img{
+    border-radius: 99999px;
+}
+
+div.acc-switcher-container .acc-namenat-p-u{
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    margin-top: 8px;
+    justify-content: center;
 }
 
-div.acc-switcher-p-u .acc-settings-container-p-u .acc-namenat-p-u .name{
-    font: bold 0.88rem var(--apple-normal);
+div.acc-switcher-container .acc-namenat-p-u .name{
+    font: 700 15px var(--default-bold);
+    line-height: 20px;
 }
 
-div.acc-switcher-p-u .acc-settings-container-p-u .acc-namenat-p-u .at{
-    font: normal 0.9rem var(--default-normal);
+div.acc-switcher-container .acc-namenat-p-u .at{
+    font: normal 15px var(--default-normal);
     color: var(--default-light-gray);
 }
 
-div.acc-switcher-p-u .acc-settings-container-p-u .check-p-u{
-    justify-self: flex-end;
-    align-self: center;
+div.acc-switcher-container .check-p-u {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div.acc-switcher-container .check-p-u div i{
     color: var(--tt-blue);
+    width: 18.75px;
+    height: 18.75px;
 }
 
     /* SEPARATOR */
 
-div.acc-switcher-p-u .separator{
+div.acc-switcher-container .separator{
     background-color: var(--separator-default-gray);
     height: 1px;
 }
     /* SEPARATOR */
 /* POP-UP LINKS */
 
-div.allcontent-container .acc-switcher-p-u a{
-    font: normal 0.9rem var(--default-normal);
+div.allcontent-container .acc-switcher-container a{
+    font: normal 15px var(--default-normal);
+    line-height: 20px;
     color: var(--default-link-gray);
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 16px;
 }
 
-div.allcontent-container  .acc-switcher-p-u a:hover{
+div.allcontent-container  .acc-switcher-container a:hover{
     background-color: var(--white-box-light-hover);
-    border-radius: 0px 0px 6px 6px;
+    border-radius: 16px;
 }
 
     /* MAIN CONTENT CONFIG */
 
-
+.separator1{
+    width: 1px;
+    height: 100wh;
+    background-color: var(--separator-default-gray);
+}
 
 main.main-container {
     display: flex;
     justify-self: flex-end;
     width: 1165px;
+    height: 100vh;
+    overflow: hidden;
+
 }
 
 main.main-container div.main-content{
     display: flex;
 }
 
-main.main-container div.main-content .center-content{
-    width: 598px;
-    height: inherit;
+
+.contain-topbar{
+    position: sticky;
     display: flex;
+    height: 53px;
+    width: 598px;
 }
 
 a.topbar-container{
@@ -369,6 +406,8 @@ a.topbar-container{
     justify-content: space-between;
     padding: 0 16px;
     cursor: pointer;
+    background-color: #ffffffd9;
+    backdrop-filter: blur(12px);
 }
 
 a.topbar-container .pagetitle-container{
@@ -390,10 +429,7 @@ a.topbar-container .icon-container{
     min-width: 56px;
     min-height: 53px;
     justify-content: flex-end;
-    align-items: center;
-}
-
-a.topbar-container .icon-container{
+    align-items: center; 
     display: flex;
     height: 20px;
     width: 20px;
@@ -405,6 +441,34 @@ a.topbar-container .icon-container i{
     color: var(--default-link-gray);
     justify-content: end;
 }
+
+div.ttupdate-container{
+    display: flex;
+    position: absolute;
+    top: 53px;
+}
+
+div.ttupdate-container .ttup-logo-container{
+    width: 48px;
+    height: 48px;
+}
+
+    /* MAIN CONTENT */
+
+main.main-container div.main-content .center-content{
+    width: 598px;
+    margin-top: 53px;
+    height: 100vh;
+    display: flex;
+}
+
+/* HARVARD BOOK */
+main.main-container .center-content .p-test{
+    white-space: pre;
+    padding: 16px;
+}   
+/* -------------- */
+
 
 
 
