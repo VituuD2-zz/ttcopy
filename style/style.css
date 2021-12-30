@@ -1,6 +1,6 @@
-/* v1.7
-28/12/21
-2:20am */
+/* v1.8
+29/12/21
+9:35pm */
 
 @charset "UTF-8";
 
@@ -162,6 +162,8 @@ nav.vertical .nav-list-container  a i{
 nav.vertical .nav-list-container  a span{
     margin-right: 16px;
     margin-left: 20px;
+    font-size: 20px;
+    line-height: 24px;
 }
 
     /* TWEET BUTTON */
@@ -391,6 +393,7 @@ main.main-container div.main-content{
     display: flex;
 }
 
+/* TOP BAR CONFIG */
 
 .contain-topbar{
     position: sticky;
@@ -426,21 +429,35 @@ a.topbar-container .pagetitle-container span{
 
 
 a.topbar-container .icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     min-width: 56px;
     min-height: 53px;
-    justify-content: flex-end;
-    align-items: center; 
-    display: flex;
-    height: 20px;
-    width: 20px;
     line-height: 20px;
 }
 
-a.topbar-container .icon-container i{
+a.topbar-container .regular-icon-container{
+    display: flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    margin-right: calc(-9px);
+    transition: all .3s ease;
+}
+
+a.topbar-container .regular-icon-container:hover{
+    border-radius: 9999px;
+    background-color: var(--white-box-hover);
+}
+
+a.topbar-container .regular-icon-container i{
     font-size: 20px;
     color: var(--default-link-gray);
-    justify-content: end;
 }
+
+/* TT UPDATE CONFIG */
 
 div.ttupdate-container{
     display: flex;
@@ -453,7 +470,25 @@ div.ttupdate-container .ttup-logo-container{
     height: 48px;
 }
 
-    /* MAIN CONTENT */
+div.ttupdate-container .update-box-container{
+    padding: 12px;
+}
+
+div.ttupdate-container .update-box{
+    width: 502px;
+    height: 28px;
+}
+
+div.ttupdate-container .update-box input{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+    /* CENTER CONTENT */
 
 main.main-container div.main-content .center-content{
     width: 598px;
