@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home / Twitter</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="../Fontawesome_pro_v6/css/all.css">
     <link rel="shortcut icon" href="images/twitter-logo.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/18d19fda36.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -122,6 +122,11 @@
         <div class="separator1"></div> 
         <main class="main-container">
             <div class="main-content">
+
+                <!-- SEPARATOR -->
+                <div class="separator2" style="background-color: #eff3f4; width: 1px; height: 100%; top: 0; position: fixed;"></div>
+
+                <!-- TOPBAR CONTAINER -->
                 <div class="contain-topbar">
                     <a href="#" class="topbar-container">
                         <div class="pagetitle-container main-page">
@@ -136,59 +141,72 @@
                 </div>
                 
                 <!-- TTUPDATE CONTENT -->
-                <div class="ttupdate-container">
-                    <div class="ttup-logo-container">
-                        <div class="ttup-logo">
-                            <img src="images/h-YEkUn1_normal.jpg" alt="logo">
-                        </div>
-                    </div>
-
-                    <div class="searchboxNiconsection">
-                        <div class="update-box-container">
-                            <div class="update-box">
-                                <input type="text" id="update-box" placeholder="What's happening?">
+                <div class="container-cont-pd">
+                    <div class="unknown-line"></div>
+                    <div class="ttupdate-container">
+                        <div class="ttup-logo-container">
+                            <div class="ttup-logo">
+                                <img src="images/h-YEkUn1_normal.jpg" alt="logo">
                             </div>
-                        
                         </div>
-                        <div class="icon-row-container">
-                            <div class="icons-row">
-                                <div class="icon-frame">
-                                    <img src="images/ttupdate_icons/SVGs/frame.svg" alt="frame">
+                        <!-- BOX CONTAINER -->
+                        <div class="searchboxNiconsection">
+                            <div class="update-box-container">
+                                <div class="update-box">
+                                    <input type="text" id="update-box" placeholder="What's happening?">
                                 </div>
-                        
-                                <div class="icon-gif">
-                                    <img src="images/ttupdate_icons/SVGs/gif.svg" alt="gif">
+                            </div>
+                            <div style="flex-direction: row; align-items: center; display: flex; border: 0 solid black;"></div>
+                            <!-- ICON ROW CONTAINER -->
+                            <div class="icon-row-container"> <!-- ICON ROW CONTAINER CONTAINS: TWEET BTN (ttup-tweetbtn) -->
+                                <div class="icons-row">
+                                    <div class="icon-frame ttup-logo-row">
+                                        <a href="#"><i class="fal fa-image"></i></a>
+                                    </div>
+                    
+                                    <div class="icon-gif ttup-logo-row">
+                                        <a href="#"><i class="fal fa-apple-crate"></i></a>
+                                    </div>
+                                    <div class="icon-chart ttup-logo-row">
+                                        <a href="#"><i class="fal fa-chart-bar"></i></a>
+                                    </div>
+                                    <div class="icon-smile ttup-logo-row">
+                                        <a href="#"><i class="fal fa-smile"></i></a>
+                                    </div>
+                    
+                                    <div class="icon-schedule ttup-logo-row">
+                                        <a href="#"><i class="far fa-calendar-alt"></i></a>
+                                    </div>
+                    
+                                    <div class="icon-pin ttup-logo-row">
+                                        <a href="#"><i class="fal fa-map-marker-alt"></i></a>
+                                    </div>
                                 </div>
-                        
-                                <div class="icon-bars">
-                                    <img src="images/ttupdate_icons/SVGs/bar.svg" alt="bars">
-                                </div>
-                        
-                                <div class="icon-smile">
-                                    <img src="images/ttupdate_icons/SVGs/smile.svg" alt="smile">
-                                </div>
-                        
-                                <div class="icon-schedule">
-                                    <img src="images/ttupdate_icons/SVGs/calendar.svg" alt="schedule">
-                                </div>
-                        
-                                <div class="icon-pin">
-                                    <img src="images/ttupdate_icons/SVGs/pin.svg" alt="pin">
+                                <!-- TWEET BTN CONTAINER -->
+                                <div class="ttup-tweetbtn-container">
+                                    <a class="ttup-tweetbtn" href="#">
+                                        <div>
+                                            <span>Tweet</span>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                    
+                <div class="separator3"></div>
+
+                <!-- CENTER CONTAINER -->
                 <div class="center-content">
-
-                 <div class="separator2" style="background-color: #eff3f4; width: 1px; height: 100%; top: 0; position: fixed;"></div> 
-
-                    <!-- HARVARD BOOK -->
-                    <!-- <div class="p-test">
+                    <div class="center-container">
+                        <!-- HARVARD BOOK -->
+                    <div class="p-test">
+                        
                         <p><strong>
-
-
+                            
+                            
                             DESCUBRA O BENEFÍCIO DA FELICIDADE
                             O PARAÍSO PERDIDO E ENCONTRADO
                             PESQUISA DA FELICIDADE EM HOGWARTS
@@ -638,9 +656,11 @@
                             deixa estressados e nos vemos sob uma pressão crescente para
                             atingir o sucesso a qualquer custo.</p>
                     </div>
-                </div> -->
-                </div> 
-
+                </div>
+                    </div>
+                </div>
+            </div> 
+                
                 <!-- <div class="search-input-container">
                     <div class="search-icon">
                         <i class="fas fa-search"></i>
@@ -649,7 +669,6 @@
                         <input type="text" >
                     </div>
                 </div> --> 
-            </div>
         </main>
     </div>
     <script src="script.js"></script>

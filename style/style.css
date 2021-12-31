@@ -1,6 +1,6 @@
-/* v1.9
-29/12/21
-4:11am */
+/* v2.0
+31/12/21
+6:48pm */
 
 @charset "UTF-8";
 
@@ -390,8 +390,6 @@ main.main-container {
     justify-self: flex-end;
     width: 1165px;
     height: 100vh;
-    overflow: hidden;
-
 }
 
 main.main-container div.main-content{
@@ -403,8 +401,8 @@ main.main-container div.main-content{
 .contain-topbar{
     position: sticky;
     display: flex;
-    height: 53px;
-    width: 598px;
+    top: -0.5px;
+    backface-visibility: hidden;
 }
 
 a.topbar-container{
@@ -468,41 +466,59 @@ a.topbar-container .regular-icon-container img{
     color: var(--default-link-gray);
 }
 
+/* UNKNOWN LINE */
+.unknown-line{
+    display: flex;
+    height: 0.188rem;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    flex-shrink: 0;
+}
+
 /* TT UPDATE CONFIG */
+
+div.container-cont-pd{
+    display: flex;
+    position: relative;
+    top: 53px;
+    padding: 4px 0;
+}
 
 div.ttupdate-container{
     display: flex;
-    position: absolute;
-    top: 53px;
-    padding: 7px 16px;
+    padding: 0 16px;
 }
 
-div.ttupdate-container .ttup-logo-container{
-    padding-top: 1px;
+div.container-cont-pd .ttup-logo-container{
+    padding-top: 4px;
     margin-right: 12px;
 }
 
-div.ttupdate-container .ttup-logo-container img{
+div.container-cont-pd .ttup-logo-container img{
     width: 48px;
     height: 48px;
     border-radius: 9999px;
 }
 
-div.ttupdate-container .update-box-container{
+div.container-cont-pd .update-box-container{
     display: flex;
-    width: 502px;
-    height: 50px;
+    padding-top: 4px;
+    min-height: 56px;
+    background-color: #fff;
     border: solid 2px transparent;
 }
 
-div.ttupdate-container .update-box{
+div.container-cont-pd .update-box{
     min-height: 28px;
     min-width: 502px;
-    padding: 10px 0;
-    line-height: 38px;
+    padding: 12px 0;
+    line-height: 24px;
 }
 
-div.ttupdate-container .update-box input{
+div.container-cont-pd .update-box input{
     width: 100%;
     height: 28px;
     border: none;
@@ -510,29 +526,109 @@ div.ttupdate-container .update-box input{
     color: var(--default-link-gray);
 }
 
-div.ttupdate-container .update-box input::placeholder{
+div.container-cont-pd .update-box input::placeholder{
     font: normal 20px var(--default-normal);
     color: #0f141ab3;
 }
 
-div.icon-row-container .icons-row{
+div.icon-row-container{
     display: flex;
+    justify-content: space-between;
+    margin: 0 2px;
 }
 
-div.icon-row-container .icons-row img{
-    height: 20px;
-    width: 20px;
+div.icon-row-container .icons-row{
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+    flex-direction: row;
+}
+
+div.icon-row-container .ttup-logo-row{
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.icon-row-container .ttup-logo-row:hover{
+    background-color: var(--white-box-hover);
+    border-radius: 9999px;
+}
+
+div.icon-row-container  .icon-frame{
+    margin-left: -8px;
+}
+
+div.icon-row-container .icons-row a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+}
+
+div.icon-row-container .icons-row i{
+    font-size: 18px;
+    color: var(--tt-blue);
+}
+
+div.ttup-tweetbtn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+div.container-cont-pd a.ttup-tweetbtn{
+    display: flex;
+    border-radius: 9999px;
     background-color: var(--tt-blue);
+    margin-left: 12px;
+    opacity: 0.5;
+    cursor: default;
+}
+
+.separator3{
+    display: flex;
+    width: 100%;
+    height: 1px;
+    margin: 4px 0;
+    background-color: red;
+}
+
+/* div.ttup-tweetbtn-container a.ttup-tweetbtn:hover{
+    background-color: var(--tt-blue-dark-hover);
+} */
+
+div.ttup-tweetbtn-container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0 17px;
+}
+
+div.ttup-tweetbtn-container span {
+    font: bold 15px var(--default-bold);
+    line-height: 20px;
+    color: #fff;
 }
 
 
     /* CENTER CONTENT */
 
-main.main-container div.main-content .center-content{
-    width: 598px;
-    margin-top: 53px;
-    height: 100vh;
+main.main-container .center-content{
     display: flex;
+    width: 100%;
+    max-width: 600px;
+}
+
+div.center-content .center-container{
+    position: absolute;
+    min-height: 26147px;
 }
 
 /* HARVARD BOOK */
