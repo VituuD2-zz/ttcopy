@@ -1,0 +1,477 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'chirp-normal';
+    src: url('/ttcopy/fonts/chirp-regular-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chirp-bold';
+    src: url('/ttcopy/fonts/chirp-bold-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chirp-heavy';
+    src: url('/ttcopy/fonts/chirp-heavy-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chirp-extended-heavy';
+    src: url('/ttcopy/fonts/chirp-extended-heavy-web.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'apple-normal';
+    src: url('/ttcopy/fonts/SF-Pro.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'apple-bold';
+    src: url('/ttcopy/fonts/SF-Pro-Display-Bold.otf') format('opentype');
+}
+
+
+body{
+	background-color: gray;
+}
+
+:root{
+    --default-normal: 'chirp-normal', Helvetica, Arial, sans-serif;
+    --default-heavy: 'chirp-heavy', Helvetica, Arial, sans-serif;
+    --default-bold: 'chirp-bold', Helvetica, Arial, sans-serif;
+    --default-plus-heavy: 'chirp-extended-heavy' ,Helvetica, Arial, sans-serif;
+    --apple-normal: 'apple-normal', Helvetica, Arial, sans-serif;
+    --apple-bold: 'apple-bold', Helvetica, Arial, sans-serif;
+    --tt-blue: #1D9BF0;
+    --tt-blue-light-hover: #1d9bf01a;
+    --tt-blue-dark-hover: #148cd8;
+    --default-link-gray: #0F1419;
+    --white-box-hover: #0f14191a;
+    --default-light-gray: #536471;
+    --separator-default-gray: #eff3f4;
+    --white-box-light-hover: #f7f9f9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+div.allcontent-container{
+    display: flex;
+    min-height: 796px;
+    width: 100%;
+    flex-direction: row;
+}   
+
+.main-page{
+    font-weight: 700;
+}
+
+header.size-container{
+    flex-direction: column;
+    display: flex;
+    width: 435px;
+    height: 100vh;
+    flex-grow: 1;
+    background-color: #fff;
+    align-items: flex-end;
+}
+
+div.nav-container{
+    display: flex;
+    position: fixed;
+    padding: 0 12px;
+}
+
+nav.vertical img{
+    display: flex;
+    width: 251px;
+    height: 100vh;
+}
+
+    /* POP UP CONFIG */
+
+div.acc-switcher-container{
+    position: absolute;
+    display: none;
+    min-width: 260px;
+    max-width: 360px;
+    min-height: 30px;
+    max-height: 480px;
+    width: 300px;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+    background-color: #fff;
+    transition: all .08s ease-in;
+}
+
+div.acc-switcher-container .acc-switcher-p-u{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+}
+
+/* POP-UP ACCOUNT SETTINGS */
+
+div.acc-switcher-container .acc-settings-container-p-u{
+    display: flex;
+    padding: 12px 16px;
+}
+
+div.acc-switcher-container .tospace-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.acc-switcher-container .acc-img-p-u{
+    margin-right: 12px;
+    width: 48px;
+    height: 48px;
+}
+
+div.acc-switcher-container .acc-img-p-u img{
+    border-radius: 99999px;
+}
+
+div.acc-switcher-container .acc-namenat-p-u{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.acc-switcher-container .acc-namenat-p-u .name{
+    font: bold 0.88rem var(--apple-normal);
+}
+
+div.acc-switcher-container .acc-namenat-p-u .at{
+    font: normal 0.9rem var(--default-normal);
+    color: var(--default-light-gray);
+}
+
+div.acc-switcher-container .check-p-u {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div.acc-switcher-container .check-p-u div{
+}
+
+div.acc-switcher-container .check-p-u div i{
+    color: var(--tt-blue);
+    width: 18.75px;
+    height: 18.75px;
+}
+
+    /* SEPARATOR */
+
+div.acc-switcher-container .separator{
+    background-color: var(--separator-default-gray);
+    height: 1px;
+}
+    /* SEPARATOR */
+/* POP-UP LINKS */
+
+div.allcontent-container .acc-switcher-container a{
+    font: normal 15px var(--default-normal);
+    line-height: 20px;
+    color: var(--default-link-gray);
+    padding: 16px;
+}
+
+div.allcontent-container  .acc-switcher-container a:hover{
+    background-color: var(--white-box-light-hover);
+    border-radius: 16px;
+}
+
+main.main-container{
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.main-content{
+    display: flex;
+    width: 990px;
+    min-height: 100%;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+div.focus-container{
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    flex-direction: column;
+    border: 0 solid black;
+    border-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-color: var(--separator-default-gray);
+    background-color: #7b88d4;
+}
+
+div.contain-topbar{
+    display: flex;
+    flex-direction: column;
+    top: -0.5px;
+    position: sticky;
+    height: 53px;
+} 
+
+div.contain-topbar .topbar-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    cursor: pointer;
+    padding: 0 16px;
+    background-color: #ffffffd9;
+    backdrop-filter: blur( 12px);
+}
+
+.pagetitle-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.pagetitle{
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+}
+
+.pagetitle span{
+    line-height: 24px;
+    font: 700 20px var(--default-bold);
+    color: var(--default-link-gray);
+    overflow: hidden;
+}
+
+div.contain-topbar .icon-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 56px;
+    min-height: 32px;
+    align-items: flex-end;  
+    justify-content: center;
+}
+
+.regular-icon-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 36px;
+    min-height: 36px;
+    margin-right: calc(-9px);
+    border-radius: 9999px;
+    transition: .2s;
+    align-items: center;
+    justify-content: center;
+}
+
+.regular-icon-container:hover{
+    background-color: var(--white-box-hover);
+}
+
+.regular-icon{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    flex-grow: 1;
+    font: 300 20px var(--default-bold);
+    line-height: 20px;
+    color: var(--default-link-gray);
+}
+
+.regular-icon i{
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    max-width: 100%;
+}
+
+/* TT UPDATE CONFIG */
+
+div.control-div-ttup{
+    display: flex;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #fff;
+}
+
+div.control-div-ttup .container-cont-pd{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+div.control-div-ttup .ttupdate-container{
+    display: flex;
+}
+
+div.ttupdate-container .ttup-logo-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+    flex-basis: 48px;
+    margin-right: 12px;
+}
+
+.ttup-logo{
+    overflow: visible;
+    width: 48px;
+    height: 48px;
+}
+
+.ttup-logo img{
+    border-radius: 9999px;
+}
+
+div.ttupdate-container .searchboxNiconsection{
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+}
+
+div.update-box-container{
+    display: flex;
+    min-height: 56px;
+    background-color: #fff;
+    border: solid 2px transparent;  
+}
+
+.update-box{
+    min-height: 28px;
+    min-width: 502px;
+    padding: 12px 0;
+    line-height: 24px;
+}
+
+.update-box input{
+    width: 100%;
+    height: 28px;
+    font: normal 20px var(--default-normal);
+    color: var(--default-link-gray);
+    border: hidden;
+}
+
+.update-box input:focus{
+    outline-width: 0px;
+    outline-color: white;
+}
+
+.update-box input::placeholder{
+    font: normal 20px var(--default-normal);
+    color: #0f141ab3;
+}
+
+div.icon-row-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2px;
+    background-color: #fff;
+}
+
+div.icon-row-container .icons-row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.icons-row a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+}
+
+.icons-row i{
+    font-size: 18px;
+    color: var(--tt-blue);
+}
+
+.ttup-logo-row{
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+}
+
+.ttup-logo-row:hover{
+    background-color: rgb(29, 155, 240, 0.1);
+    border-radius: 9999px;
+}
+
+.icon-frame{
+    margin-left: -8px;
+}
+
+div.ttup-tweetbtn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+a.ttup-tweetbtn{
+    display: flex;
+    border-radius: 9999px;
+    background-color: var(--tt-blue);
+    margin-left: 12px;
+    opacity: 0.5;
+    cursor: default;
+}
+
+.ttup-tweetbtn div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0 17px;
+}
+
+.ttup-tweetbtn span{
+    font: bold 15px var(--default-bold);
+    line-height: 20px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+div.side-container{
+    display: flex;
+    width: 350px;
+    margin-right: 10px;
+    background-color: #7bd4c5;
+}       
