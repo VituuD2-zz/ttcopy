@@ -86,6 +86,7 @@ div.nav-container{
     display: flex;
     position: fixed;
     padding: 0 12px;
+    background-color: #ff7a59;
 }
 
 nav.vertical img{
@@ -322,7 +323,6 @@ div.control-div-ttup .container-cont-pd{
     padding-right: 16px;
 }
 
-
 div.control-div-ttup .ttupdate-container{
     display: flex;
 }
@@ -440,9 +440,8 @@ div.ttup-tweetbtn-container{
 a.ttup-tweetbtn{
     display: flex;
     border-radius: 9999px;
-    background-color: var(--tt-blue);
+    background-color: #8ECDF7;
     margin-left: 12px;
-    opacity: 0.5;
     cursor: default;
 }
 

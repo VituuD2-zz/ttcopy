@@ -1,6 +1,6 @@
-/* v2.1
-1/1/22
-4:15pm */
+/* v2.2
+3/1/22
+3:40pm */
 
 @charset "UTF-8";
 
@@ -60,43 +60,57 @@
     
 }
 
-input:focus{
-        outline:none
-    }
+html{
+    overflow-x: hidden;
+}
 
 body{
     width: 100vw;
     background-color: #fff;
 }
 
-.allcontent-container{
-    position: relative;
+div.allcontent-container{
     display: flex;
+    min-height: 796px;
+    width: 100%;
+    flex-direction: row;
+}
+
+.main-page{ 
+    font-family: var(--default-bold);
 }
 
  /* VERTICAL NAVBAR CONFIG */
 
 header.size-container{
+    display: flex;
+    flex-direction: column;
     width: 435px;
     height: 100%;
-    display: flex;
+    flex-grow: 1;
+    background-color: #fff;
+    align-items: flex-end;
 }
 
 header.size-container .nav-container{
     display: flex;
-    width: inherit;
-    height: inherit;
-    justify-content: flex-end;
+    width: 275px;
+}
+
+div.vert-container{
+    position: fixed;
+    height: 100%;
+    width: 275px;
 }
 
 nav.vertical{
-    position: fixed;
     display: flex;
     flex-direction: column;
     width: 275px;
     height: 100%;
-    padding: 0 12px;
     justify-content: space-between;
+    padding: 0 12px;
+    overflow-y: hidden;
     background-color: #fff;
 }
 
@@ -134,10 +148,6 @@ nav.vertical .nav-list-container{
     align-items: flex-start;    
     margin-top: 2px;
     margin-bottom: 4px;
-}
-
-.main-page{ 
-    font-family: var(--default-bold);
 }
 
 nav.vertical .nav-list-container a{
@@ -208,59 +218,71 @@ nav.vertical .tweet-compose-link-container .text-container span{
 
     /* ACCOUNT SETTINGS */
 
-.acc-settings-container{
+nav.vertical div.acc-settings-container{
     display: flex;
+    flex-direction: column;
     cursor: pointer;
     margin: 12px 0;
     border-radius: 9999px;
     background-color: #fff;
 }
 
-nav.vertical .acc-settings-container:hover{
+nav.vertical div.acc-settings-container:hover{
     background-color: var(--white-box-hover);
 }
 
-nav.vertical .acc-settings-container .acc-set-inside-container  .acc-img{
+.acc-img{
     display: flex;
     align-items: center;
 }
 
-nav.vertical .acc-settings-container .acc-set-inside-container {
+.acc-set-inside-container {
     display: flex;
     width: 100%;
     padding: 12px;
 }
 
-nav.vertical .acc-settings-container .acc-set-inside-container .acc-img img{
+.acc-img img{
     border-radius: 99999px;
     width: 40px;
     height: 40px;
 }
 
-nav.vertical .acc-settings-container .acc-set-inside-container .acc-namenat{
+.acc-namenat{
     display: flex;
     flex-direction: column;
     margin: 0 12px;
 }
 
-nav.vertical .acc-settings-container .acc-set-inside-container .acc-namenat span .name{
+.acc-namenat span .name{
     font: 700 15px var(--default-normal);
     line-height: 20px;
 }
 
-nav.vertical .acc-settings-container .acc-set-inside-container .acc-namenat span .at{
+.acc-namenat span .at{
     font: normal 15px var(--default-normal);
     line-height: 20px;
     color: var(--default-light-gray);
 }
 
-nav.vertical .acc-settings-container .acc-set-inside-container .dots{
-    width: 100%;
+.dots{
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 0.88rem;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    flex-grow: 1;
+    font-size: 23px;
 }
+
+
+.dots span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18.25px;
+    width: 18.25px;
+}
+
 
     /* JS ACTION */
 
@@ -379,85 +401,107 @@ div.allcontent-container  .acc-switcher-container a:hover{
 
     /* MAIN CONTENT CONFIG */
 
-.separator1{
-    width: 1px;
-    height: 100wh;
-    background-color: var(--separator-default-gray);
-}
-
 main.main-container {
     display: flex;
-    justify-self: flex-start;
+    align-items: flex-start;
     flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
 }
 
-main.main-container div.main-content{
+div.main-content{
     display: flex;
+    width: 990px;
+    min-height: 100%;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+div.focus-container{
+    display: flex;
+    max-width: 600px;
+    width: 100%;
     flex-direction: column;
+    border: 0 solid black;
+    border-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-color: var(--separator-default-gray);
+    background-color: #fff;
 }
 
 /* TOP BAR CONFIG */
-
-.contain-topbar{
-    position: sticky;
+div.contain-topbar{
     display: flex;
+    flex-direction: column;
     top: -0.5px;
-    backface-visibility: hidden;
+    position: sticky;
     height: 53px;
-    width: 100%;
-
 }
 
-a.topbar-container{
+div.contain-topbar a.topbar-container{
     display: flex;
-    max-width: 1000px;
+    flex-direction: row;
     width: 100%;
-    height: 53px;
-    justify-content: space-between;  /* CHANGE */
-    padding: 0 16px;
-    cursor: pointer;
-    background-color: #ff5e5e;
-    backdrop-filter: blur(12px);
-}
-
-a.topbar-container .pagetitle-container{
-    display: flex;
     height: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    cursor: pointer;
+    padding: 0 16px;
+    background-color: #ffffffd9;
+    backdrop-filter: blur( 12px);
+}
+
+.pagetitle-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex-grow: 1;
-    justify-content: flex-start;
-    align-items: center;
+    height: 100%;
 }
 
-a.topbar-container .pagetitle-container span{
-    font-size: 20px ;
-    line-height: 20px;
+.pagetitle{
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+}
+
+.pagetitle span{
+    line-height: 24px;
+    font: 700 20px var(--default-bold);
     color: var(--default-link-gray);
+    overflow: hidden;
 }
 
 
-a.topbar-container .icon-container{
+div .contain-topbar .icon-container{
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-direction: column;
     min-width: 56px;
-    min-height: 53px;
-    line-height: 20px;
+    min-height: 32px;
+    align-items: flex-end;  
+    justify-content: center;
 }
 
-a.topbar-container .regular-icon-container{
+.regular-icon-container{
     display: flex;
-    width: 36px;
-    height: 36px;
+    flex-direction: column;
+    min-width: 36px;
+    min-height: 36px;
     margin-right: calc(-9px);
-    transition: all .3s ease;
+    border-radius: 9999px;
+    transition: .2s;
+    align-items: center;
+    justify-content: center;
 }
 
-a.topbar-container .regular-icon-container:hover{
-    border-radius: 9999px;
+.regular-icon-container:hover{
     background-color: var(--white-box-hover);
 }
 
-a.topbar-container .regular-icon-container abbr{
+.regular-icon-container abbr{
     display: flex;
     width: 36px;
     height: 36px;
@@ -465,93 +509,130 @@ a.topbar-container .regular-icon-container abbr{
     justify-content: center;
 }
 
-a.topbar-container .regular-icon-container img{
-    font-size: 20px;
+.regular-icon{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    flex-grow: 1;
+    font: 300 20px var(--default-bold);
+    line-height: 20px;
     color: var(--default-link-gray);
 }
 
-/* UNKNOWN LINE */
-/* .unknown-line{
-    display: flex;
-    height: 0.188rem;
-    width: 100%;
-    overflow: hidden;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
-    flex-shrink: 0;
-} */
+.regular-icon i{
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    max-width: 100%;
+}
 
 /* TT UPDATE CONFIG */
 
 div.control-div-ttup{
     display: flex;
+    padding-top: 4px;
+    padding-bottom: 4px;
     background-color: #fff;
 }
 
 div.control-div-ttup .container-cont-pd{
-    display: flex;  
-    position: relative;
-    padding: 4px 0;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
-div.ttupdate-container{
+div.control-div-ttup .ttupdate-container{
     display: flex;
-    padding: 0 16px;
 }
+
 
 div.container-cont-pd .ttup-logo-container{
+    display: flex;
+    flex-direction: column;
     padding-top: 4px;
+    flex-basis: 48px;
     margin-right: 12px;
 }
 
-div.container-cont-pd .ttup-logo-container img{
+.ttup-logo{
+    overflow: visible;
     width: 48px;
     height: 48px;
+}
+
+.ttup-logo img{
     border-radius: 9999px;
 }
 
-div.container-cont-pd .update-box-container{
+div.ttupdate-container .searchboxNiconsection{
     display: flex;
+    flex-direction: column;
     padding-top: 4px;
-    min-height: 56px;
-    background-color: #fff;
-    border: solid 2px transparent;
 }
 
-div.container-cont-pd .update-box{
+div.update-box-container{
+    display: flex;
+    min-height: 56px;
+    background-color: #fff;
+    border: solid 2px transparent;  
+}
+
+.update-box{
     min-height: 28px;
     min-width: 502px;
     padding: 12px 0;
     line-height: 24px;
 }
 
-div.container-cont-pd .update-box input{
+.update-box input{
     width: 100%;
     height: 28px;
-    border: none;
     font: normal 20px var(--default-normal);
     color: var(--default-link-gray);
+    border: hidden;
 }
 
-div.container-cont-pd .update-box input::placeholder{
+.update-box input:focus{
+    outline-width: 0px;
+    outline-color: white;
+}
+
+.update-box input::placeholder{
     font: normal 20px var(--default-normal);
     color: #0f141ab3;
 }
 
 div.icon-row-container{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin: 0 2px;
+    background-color: #fff;
 }
 
 div.icon-row-container .icons-row{
     display: flex;
+    flex-direction: row;
     margin-top: 12px;
     align-items: center;
-    flex-direction: row;
 }
 
-div.icon-row-container .ttup-logo-row{
+.icons-row a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+}
+
+.icons-row i{
+    font-size: 18px;
+    color: var(--tt-blue);
+}
+
+.ttup-logo-row{
     height: 36px;
     width: 36px;
     display: flex;
@@ -560,26 +641,13 @@ div.icon-row-container .ttup-logo-row{
     transition: all .2s ease;
 }
 
-div.icon-row-container .ttup-logo-row:hover{
+.ttup-logo-row:hover{
     background-color: rgb(29, 155, 240, 0.1);
     border-radius: 9999px;
 }
 
-div.icon-row-container  .icon-frame{
+.icon-frame{
     margin-left: -8px;
-}
-
-div.icon-row-container .icons-row a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 36px;
-    width: 36px;
-}
-
-div.icon-row-container .icons-row i{
-    font-size: 18px;
-    color: var(--tt-blue);
 }
 
 div.ttup-tweetbtn-container{
@@ -589,26 +657,21 @@ div.ttup-tweetbtn-container{
     margin-top: 12px;
 }
 
-div.container-cont-pd a.ttup-tweetbtn{
+a.ttup-tweetbtn{
     display: flex;
     border-radius: 9999px;
-    background-color: var(--tt-blue);
+    background-color: #8ECDF7;
     margin-left: 12px;
-    opacity: 0.5;
     cursor: default;
 }
 
-.separator3{
+.separator-horiz{
     display: flex;
     width: 100%;
     height: 1px;
     margin: 4px 0;
     background-color: var(--separator-default-gray);
 }
-
-/* div.ttup-tweetbtn-container a.ttup-tweetbtn:hover{
-    background-color: var(--tt-blue-dark-hover);
-} */
 
 div.ttup-tweetbtn-container div{
     display: flex;
@@ -619,7 +682,7 @@ div.ttup-tweetbtn-container div{
     padding: 0 17px;
 }
 
-div.ttup-tweetbtn-container span {
+.ttup-tweetbtn span {
     font: bold 15px var(--default-bold);
     line-height: 20px;
     color: #fff;
@@ -628,27 +691,32 @@ div.ttup-tweetbtn-container span {
 
     /* CENTER CONTENT */
 
-main.main-container .center-content{
+div.focus-container div.center-container{
     display: flex;
+    max-width: 598px;
     width: 100%;
-    max-width: 600px;
+    justify-content: center;
 }
 
-div.center-content .control-div-center{
-    display: flex;
-}
-
-div.center-content .center-container{
-    min-height: 26147px;
-    background-color: #fff;
+ .center-content{
     display: block;
+    min-height: max-content;
+    max-width: inherit;
 }
 
-/* HARVARD BOOK */
-main.main-container .center-content .p-test{
-    white-space: pre;
-}   
-/* -------------- */
+.p-test{
+    width: 100%;
+}
+
+.article{
+    display: flex;
+    padding: 0 12px;
+    
+} 
+
+.article p{
+    white-space: pre-line;
+}
 
 
 
@@ -659,9 +727,12 @@ main.main-container .center-content .p-test{
 
 
 
-
-
-
+div.side-container{
+    display: flex;
+    width: 350px;
+    margin-right: 10px;
+    background-color: #fff;
+}       
 
 
 
@@ -669,4 +740,10 @@ main.main-container .center-content .p-test{
 
 @media (max-width: 1295px){
 
+}
+
+@media (max-width:1036px){
+    html{
+        overflow-x: auto;
+    }
 }
