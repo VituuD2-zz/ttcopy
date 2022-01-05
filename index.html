@@ -625,21 +625,42 @@
 
                 <!-- SIDE CONTAINER -->
                 <div class="side-container">
-
+                    <!-- SEARCH BOX -->
+                    <div style="display: flex; flex-direction: column; padding-top: 12px; padding-bottom: 64px;">
+                        <div class="search-box-container">
+                            <div class="search-box" id="search-box">
+                                <div class="search-icon-container">
+                                    <div style="padding-left: 12px;">
+                                        <div class="search-icon" >
+                                            <i id="search-icon" class="fal fa-search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-input-container">
+                                    <div class="search-input">
+                                        <input type="text" id="side-input" placeholder="Search Twitter">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex; height: 53px; position: relative; flex-direction: column; flex-shrink: 0; z-index: 0;"></div>
+                        
+                        <!-- NEWS SECTION -->
+                            <div class="section-container">
+                                <section class="news-section">
+                                    <div class="section-title">
+                                        <h2>
+                                            <span>What's happening</span>
+                                        </h2>
+                                    </div>
+                                </section>
+                            </div>
+                    </div>
                 </div>
             </div>
         </main>
     </div>
     <script src="script.js"></script>
+    <script src="input.js"></script>
 </body>
-</html> 
-
-      
-                <!-- <div class="search-input-container">
-                    <div class="search-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="search-input">
-                        <input type="text" >
-                    </div>
-                </div> --> 
+</html>
