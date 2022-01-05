@@ -1,7 +1,8 @@
-/* v2.4
+/* v2.5
 5/1/22
-6:35pm 
+8:12pm 
 footer finished, remaining only center content to complete main project 
++ Some Adjusts
 */
 
 @charset "UTF-8";
@@ -76,7 +77,7 @@ div.allcontent-container{
     font-family: var(--default-bold);
 }
 
- /* VERTICAL NAVBAR CONFIG */
+ /* VERTICAL NAVBAR STYLE */
 
 header.size-container{
     display: flex;
@@ -286,7 +287,7 @@ nav.vertical div.acc-settings-container:hover{
     display: flex;
 }
 
-     /* POP UP CONFIG */
+     /* POP UP STYLE */
 
 div.acc-switcher-container{
     position: absolute;
@@ -395,7 +396,7 @@ div.allcontent-container  .acc-switcher-container a:hover{
     border-radius: 16px;
 }
 
-    /* MAIN CONTENT CONFIG */
+    /* MAIN CONTENT STYLE */
 
 main.main-container {
     display: flex;
@@ -427,7 +428,7 @@ div.focus-container{
     background-color: var(--white);
 }
 
-/* TOP BAR CONFIG */
+/* TOP BAR STYLE */
 div.contain-topbar{
     display: flex;
     flex-direction: column;
@@ -524,7 +525,7 @@ div .contain-topbar .icon-container{
     max-width: 100%;
 }
 
-/* TT UPDATE CONFIG */
+/* TT UPDATE STYLE */
 
 div.control-div-ttup{
     display: flex;
@@ -686,7 +687,7 @@ div.ttup-tweetbtn-container div{
 }
 
 
-    /* CENTER CONTENT CONFIG*/
+    /* CENTER CONTENT STYLE*/
 div.focus-container div.center-container{
     display: flex;
     max-width: 598px;
@@ -714,7 +715,7 @@ div.focus-container div.center-container{
     white-space: pre-line;
 }
 
-    /* SIDE CONTAINER CONFIG */
+    /* SIDE CONTAINER STYLE */
 div.side-container{
     display: flex;
     flex-direction: column;
@@ -810,8 +811,6 @@ div.side-container{
 }
 
 /* NEWS SECTION */
-
-
 div.side-container .section-container{
     display: flex;
     position: relative;
@@ -827,6 +826,7 @@ div.side-container .section-container{
     border-radius: 16px;
 }
 
+/* SECTION TITLE */
 .cont-title{
     flex-direction: column;
     padding: 12px 16px;
@@ -836,56 +836,12 @@ div.side-container .section-container{
     display: flex;
     position: relative;
     font: normal 800 20px var(--default-heavy);
+    line-height: 24px;
 }
 
-.descstyl{
-    color: var(--default-light-gray);
-    line-height: 16px;
-    font: normal 400 13px var(--default-normal);
-    cursor: pointer;
-}
+/* STYLE APPLIED SIMULTANEOUSLY TO NEWS SECTION ARTICLES */
 
-.descblock{
-    display: flex;
-    position: relative;
-    align-items: baseline;
-    cursor: pointer;
-}
-
-.withimgstyl{
-    color: var(--default-link-gray);
-    line-height: 20px;
-    font: normal 700 13px var(--default-bold);
-    margin-top: 2px;
-    cursor: pointer;
-    margin-bottom: 2px;
-}
-
-.noimgstyl{
-    color: var(--default-link-gray);
-    line-height: 20px;
-    font: normal 700 13px var(--default-bold);
-    cursor: pointer;
-    padding-top: 2px;
-}
-
-.news-dot{
-    color: var(--default-light-gray);
-    line-height: 20px;
-    font: normal 400 15px var(--default-normal);
-    padding-right: 4px;
-    padding-left: 4px;
-    flex-shrink: 0;
-}
-
-.news-txtblock{
-    display: flex;
-    position: relative;
-    flex: 1;
-    margin-right: 12px;
-    flex-direction: column;
-}
-
+/* ---- applied to each news article container 1-5 ---- */
 .newspd{
     padding: 12px 16px;
     flex-direction: column;
@@ -897,6 +853,69 @@ div.side-container .section-container{
     background-color: var(--transparent-hover);
 }
 
+
+/* ---- news description & description block ---- */
+.descstyl{
+    color: var(--default-light-gray);
+    font: normal 400 13px var(--default-normal);
+    cursor: pointer;
+}
+
+.descblock{
+    display: flex;
+    position: relative;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+/* ---- font and text h3 container style | "articles with img and without"  ---- */
+.withimgstyl{
+    color: var(--default-link-gray);
+    font: normal 700 15px var(--default-bold);
+    margin-top: 2px;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.noimgstyl{
+    color: var(--default-link-gray);
+    font: normal 700 15px var(--default-bold);
+    cursor: pointer;
+    padding-top: 2px;
+}
+
+/* ---- dot in description container ---- */
+.news-dot{
+    color: var(--default-light-gray);
+    font: normal 400 15px var(--default-normal);
+    padding-right: 4px;
+    padding-left: 4px;
+    flex-shrink: 0;
+}
+
+/* ---- all article text contained ---- */
+.news-txtblock{
+    display: flex;
+    position: relative;
+    flex: 1;
+    margin-right: 12px;
+    flex-direction: column;
+}
+
+.ttsmgtop{
+    margin-top: 4px;
+}
+
+.descr-container span{
+    line-height: 16px;
+}
+
+.section-container h3 span{
+    line-height: 20px;
+}
+
+
+/* ---- imgs style ---- */
 .divimg{
     width: 15%;
     height: 15%;
@@ -917,6 +936,7 @@ div.side-container .section-container{
     position: absolute;
 }
 
+/* FOOTER STYLE */
 .default-footer, a{
     font: normal 400 13px var(--default-normal);
     line-height: 16px;
