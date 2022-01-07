@@ -1,6 +1,6 @@
-/* v2.5
-5/1/22
-8:12pm 
+/* v2.6
+7/1/22
+3:30am 
 footer finished, remaining only center content to complete main project 
 + Some Adjusts
 */
@@ -31,7 +31,12 @@ footer finished, remaining only center content to complete main project
     --default-normal: 'chirp-normal', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --default-heavy: 'chirp-heavy', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --default-bold: 'chirp-bold', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --tt-blue: #1D9BF0;
+    --tt-blue: #1d9bf0;
+    --tt-blue-hover: #1d9bf01a;
+    --tt-pink: #f91880;
+    --tt-pink-hover: #f918801a;
+    --tt-green: #00ba7c;
+    --tt-green-hover: #00ba7c1a;
     --tt-blue-light-hover: #1d9bf01a;
     --tt-blue-dark-hover: #148cd8;
     --default-link-gray: #0F1419;
@@ -40,6 +45,7 @@ footer finished, remaining only center content to complete main project
     --separator-default-gray: #eff3f4;
     --white-box-light-hover: #f7f9f9;
     --transparent-hover: rgba(0, 0, 0, 0.03);
+    --transparent-black-hover: #1a1a1a26;
     --white: #ffffff;
 }
 
@@ -57,6 +63,10 @@ html{
     scroll-behavior: smooth;
 }
 
+a, a:active, a:visited{
+    color: var(--tt-blue);
+}
+
 body{
     width: 100vw;
     background-color: var(--white);
@@ -71,6 +81,13 @@ div.allcontent-container{
 
 .dspflex{
     display: flex;
+}
+
+.defcfg{
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-shrink: 0;
 }
 
 .main-page{ 
@@ -109,6 +126,7 @@ nav.vertical{
     padding: 0 12px;
     overflow-y: hidden;
     background-color: var(--white);
+    
 }
 
     /* LOGO */
@@ -118,7 +136,7 @@ nav.vertical .logo-icon{
     width: 52px;
     height: 56px;
     padding: 2px 0;
-    display: flex;
+    display: flex;  
     align-items: center;
     justify-content: center;
 }
@@ -434,7 +452,7 @@ div.contain-topbar{
     flex-direction: column;
     top: -0.5px;
     position: sticky;
-    height: 53px;
+    min-height: 53px;
 }
 
 div.contain-topbar a.topbar-container{
@@ -693,27 +711,300 @@ div.focus-container div.center-container{
     max-width: 598px;
     width: 100%;
     justify-content: center;
+    height: 100%;
 }
 
  .center-content{
     display: block;
     min-height: max-content;
     max-width: inherit;
+    width: inherit;
+    height: 100%;
+ }
+
+ section.artic-section{
+    display: flex;
+    max-width: inherit;
+    width: inherit;
+    height: 100%;
+    position: relative;
 }
 
-.p-test{
-    width: 100%;
+section.artic-section a:hover{
+    text-decoration: underline;
+}
+
+.art-container-1{
+    display: flex;
+    transform: translateY(0px);
+    position: absolute;
+    flex-direction: column;
+}
+
+.art-container-1:hover{
+    background-color: var(--transparent-hover);
+}
+
+.art-content-1{
+    display: block;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--separator-default-gray);
+    outline-style: none;
 }
 
 .article{
     display: flex;
-    padding: 0 12px;
-    
-} 
+    position: relative;
+    flex-direction: column;
+    padding-right: 16px;
+    padding-left: 16px;
+    outline-style: none;
+    cursor: pointer;
+}
+.wspace{
+    display: flex;
+    flex-direction: column;
+}
 
-.article p{
+.wspace div{
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+div.art-all-content{
+    display: flex;
+}
+
+/* USER LOGO STYLE */
+.art-logo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 48px;
+    margin-right: 12px;
+}
+
+.art-logo{
+    border-radius: 100px;
+    height: 100%;
+    width: 100%;
+}
+
+.art-logo img{
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+}
+
+    /* REMMAINING COMPONENTS  */
+.art-rest-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+    flex-grow: 1;
+}
+
+/* user info: NAME, @, (dot), time */
+.art-userinfo-cont{
+    display: flex;
+}
+
+.art-userinfo{
+    display: flex;
+}
+
+.art-userinfo-name{
+    
+}
+
+.art-userinfo-name a{
+    display: flex;
+    color: var(--default-link-gray);
+    font: normal 700 15px var(--default-normal);
+}
+
+.art-userinfo-data{
+    display: flex;
+    margin-left: 4px;
+    flex-shrink: 1;
+}
+
+.art-userinfo-data span{
+    color: var(--default-light-gray);
+    font: normal 400 15px var(--default-normal);
+    line-height: 20px;
+}
+
+    /* MAIN CONTENT & REACTION BAR */
+.art-mainNreact-cont{
+
+}
+
+/* main info (img or txt)container */
+.art-main-container{
+
+}
+
+.art-main{
+    display: flex;
     white-space: pre-line;
 }
+
+.art-main span{
+    color: var(--default-link-gray);
+    position: relative;
+    font: normal 400 15px var(--default-normal);
+    line-height: 20px;
+}
+
+    /* REACTION BAR */
+.art-react-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.art-react{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    max-width: 330px;
+    column-gap: 8px;
+    justify-content: space-between;
+}
+
+/* comment container */
+div.art-comm{
+    display: flex;
+    position: relative;
+    min-height: 20px;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: calc(-7px);
+}
+
+/* retweet container */
+div.art-rett{
+    display: flex;
+    position: relative;
+    min-height: 20px;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: calc(-4px);
+}
+
+/* like container */
+div.art-like{
+    display: flex;
+    position: relative;
+    min-height: 20px;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.art-icon{
+    display: inline;
+    width: 32.5px;
+    height: 33.5px;
+    border-radius: 9999px;
+    outline-style: none;
+    background-color: transparent;
+    color: var(--default-light-gray);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all .2s;
+}
+
+.art-icon i{
+    line-height: 32.5px;
+    text-align: right;
+}
+
+.like-icon i{
+    transition: className .55s ease-in;
+}
+
+.art-value{
+    display: inline;
+    min-width: calc(1em + 24px);
+    font: normal 400 13px var(--default-normal);
+    color: var(--default-light-gray);
+    white-space: nowrap;
+    padding-right: 12px;
+    padding-left: 4px;
+    line-height: 14px;
+    transition: all .2s; 
+}
+
+.likicocol{
+    color: var(--tt-pink);
+}
+
+.likvalcol{
+    color: var(--tt-pink);
+}
+
+.likespan::before{
+    content: '776';
+}
+
+.likespan-act::before{
+    content: '777';
+}
+
+.comicohov{
+    background-color: var(--tt-blue-hover);
+    color: var(--tt-blue);
+}
+
+.comvalhov{
+    color: var(--tt-blue);
+}
+
+.rtwicohov{
+    background-color: var(--tt-green-hover);
+    color: var(--tt-green);
+}
+
+.rtwvalhov{
+    color: var(--tt-green);
+}
+
+.likicohov{
+    background-color: var(--tt-pink-hover);
+    color: var(--tt-pink);
+}
+
+.likvalhov{
+    color: var(--tt-pink);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /* SIDE CONTAINER STYLE */
 div.side-container{
@@ -725,6 +1016,24 @@ div.side-container{
 }
 
 /* SEARCH BOX */
+/* ---- container of side content with config ---- */
+.side-config{
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+    padding-bottom: 64px;
+}
+
+/* ---- invisible block below .search-box ---- */
+.invi-block{
+    display: flex;
+    height: 53px;
+    position:relative;
+    flex-direction: column;
+    flex-shrink: 0;
+    z-index: 0;
+}
+
 .search-box-container{
     display: flex;
     min-height: 32px;
@@ -937,7 +1246,23 @@ div.side-container .section-container{
 }
 
 /* FOOTER STYLE */
-.default-footer, a{
+footer{
+    margin-bottom: 16px;
+    background-color: transparent;
+    border: solid 0px var(--separator-default-gray);
+    border-radius: 16px;
+}
+
+.foobox{
+    margin: 2px 0;
+}
+
+.foo-container{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.default-footer, .default-footer a{
     font: normal 400 13px var(--default-normal);
     line-height: 16px;
     color: var(--default-light-gray);
@@ -952,23 +1277,6 @@ div.side-container .section-container{
     line-height: 16px;
     color: var(--default-light-gray);
 }
-
-.foobox{
-    margin: 2px 0;
-}
-
-.foo-container{
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-footer{
-    margin-bottom: 16px;
-    background-color: transparent;
-    border: solid 0px var(--separator-default-gray);
-    border-radius: 16px;
-}
-
 
 
 
