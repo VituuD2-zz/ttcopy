@@ -1,6 +1,6 @@
-/* v2.6
-7/1/22
-3:30am 
+/* v2.7
+8/1/22
+3:56am 
 footer finished, remaining only center content to complete main project 
 + Some Adjusts
 */
@@ -736,7 +736,6 @@ section.artic-section a:hover{
 
 .art-container-1{
     display: flex;
-    transform: translateY(0px);
     position: absolute;
     flex-direction: column;
 }
@@ -929,9 +928,9 @@ div.art-like{
     text-align: right;
 }
 
-.like-icon i{
-    transition: className .55s ease-in;
-}
+/* .like-icon i{
+    transition: <transation-property> .55s ease-in;
+} */
 
 .art-value{
     display: inline;
@@ -945,22 +944,7 @@ div.art-like{
     transition: all .2s; 
 }
 
-.likicocol{
-    color: var(--tt-pink);
-}
-
-.likvalcol{
-    color: var(--tt-pink);
-}
-
-.likespan::before{
-    content: '776';
-}
-
-.likespan-act::before{
-    content: '777';
-}
-
+/* ART REACTION HOVER CLASSES */
 .comicohov{
     background-color: var(--tt-blue-hover);
     color: var(--tt-blue);
@@ -988,6 +972,7 @@ div.art-like{
     color: var(--tt-pink);
 }
 
+/* art like reaction - like button click effect classes */
 
 
 
