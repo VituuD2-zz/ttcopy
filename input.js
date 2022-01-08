@@ -1,3 +1,10 @@
+let accsett = document.querySelector('.acc-settings-container');
+let accswitch =document.querySelector('.acc-switcher-container');
+
+accsett.addEventListener('click', function() {
+    accswitch.classList.toggle('active');
+});
+
 let box = document.getElementById('search-box');
 let input = document.getElementById('side-input');
 let icon = document.getElementById('search-icon');
