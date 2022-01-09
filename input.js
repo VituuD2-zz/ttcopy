@@ -17,8 +17,7 @@ upbox.addEventListener('blur', function (){
     ttbtn.classList.remove('ttbtn');
 });
 
-
-
+// TWEET BOX CHECKER
 function get(){
     var issfocus = (document.activeElement === upbox);
 
@@ -28,19 +27,6 @@ function get(){
         document.querySelector('#updatebox').value = ''; 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // SEARCH BOX EFFECT

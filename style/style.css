@@ -1,6 +1,6 @@
-/* v2.8
+/* v2.9
 9/1/22
-3:40am 
+2:14pm
 footer finished, remaining only center content to complete main project 
 + Some Adjusts
 */
@@ -453,6 +453,7 @@ div.contain-topbar{
     top: -0.5px;
     position: sticky;
     min-height: 53px;
+    z-index: 2;
 }
 
 div.contain-topbar a.topbar-container{
@@ -750,6 +751,7 @@ section.artic-section a:hover{
     display: flex;
     position: absolute;
     flex-direction: column;
+    z-index: 1;
 }
 
 .art-container-1:hover{
@@ -778,12 +780,51 @@ section.artic-section a:hover{
     flex-direction: column;
 }
 
-.wspace div{
+.wspace-container{
     display: flex;
     flex-direction: row;
     padding-top: 12px;
-    flex-grow: 1;
+    max-height: 100%;
+    margin-top: -4px;
+    margin-bottom: 4px;
+}
+
+.wspace-icon{
+    display: flex;
+    flex-basis: 48px;
+    flex-grow: 0;
+    margin-right: 12px;
+    justify-content: flex-end;
+    align-items: center;
+    white-space: nowrap;
+
+}
+
+.wspace i{
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    color: var(--default-light-gray);
+    line-height: 18px;
+}
+
+.wspace-span{
+    display: flex;
     flex-basis: 0;
+    flex-grow: 1;
+    white-space: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.wspace a{
+    color: var(--default-light-gray);
+}
+
+.wspace span{
+    line-height: 16px;
+    font:normal 700 14px var(--default-bold);
+    color: var(--default-light-gray);
 }
 
 div.art-all-content{
@@ -864,6 +905,12 @@ div.art-all-content{
 .art-main{
     display: flex;
     white-space: pre-line;
+}
+
+.art-main img{
+    margin-top: 12px;
+    border-radius: 16px;
+
 }
 
 .art-main span{
