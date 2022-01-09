@@ -1,6 +1,6 @@
-/* v2.7
-8/1/22
-3:35pm 
+/* v2.8
+9/1/22
+3:40am 
 footer finished, remaining only center content to complete main project 
 + Some Adjusts
 */
@@ -606,7 +606,9 @@ div.update-box-container{
     height: 28px;
     font: normal 20px var(--default-normal);
     color: var(--default-link-gray);
-    border: hidden;
+    border-radius: 0px;
+    border-width: 0px;
+    outline-style: none;
 }
 
 .update-box input:focus{
@@ -673,12 +675,22 @@ div.ttup-tweetbtn-container{
     margin-top: 12px;
 }
 
-a.ttup-tweetbtn{
+.ttup-tweetbtn{
     display: flex;
     border-radius: 9999px;
-    background-color: #8ECDF7;
     margin-left: 12px;
+    transition: .2s ease;
+    background-color: #8ECDF7;
     cursor: default;
+}
+
+.ttbtn{
+    background-color: var(--tt-blue);
+    cursor: pointer;
+}
+
+.ttbtn:hover{
+    background-color: var(--tt-blue-dark-hover);
 }
 
 .separator-horiz{
@@ -973,6 +985,14 @@ div.art-like{
 }
 
 /* art like reaction - like button click effect classes */
+
+.likicoclk{
+    color: var(--tt-pink);
+}
+
+.likvalclk{
+    color: var(--tt-pink);
+}
 
 
 

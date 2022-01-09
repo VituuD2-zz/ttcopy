@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" href="awesome6/css/all.css">
     <link rel="shortcut icon" href="images/twitter-logo.ico" type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="allcontent-container">
@@ -152,7 +151,7 @@
                                     <div class="searchboxNiconsection">
                                         <div class="update-box-container">
                                             <div class="update-box">
-                                                <input type="text" id="update-box" placeholder="What’s happening?">
+                                                <input type="text" id="updatebox" placeholder="What’s happening?">
                                             </div>
                                         </div>
                                         <div style="flex-direction: row; align-items: center; display: flex; border: 0 solid black;"></div>
@@ -185,7 +184,7 @@
                         
                                                 <abbr title="Schedule">
                                                     <div class="icon-schedule ttup-logo-row">
-                                                        <a href="#"><i class="far fa-calendar-alt"></i></a>
+                                                        <a href="#"><i class="fal fa-calendar-check"></i></i></a>
                                                     </div>
                                                 </abbr>
                         
@@ -197,7 +196,7 @@
                                             </div>
                                             <!-- TWEET BTN CONTAINER -->
                                             <div class="ttup-tweetbtn-container">
-                                                <a class="ttup-tweetbtn" href="#">
+                                                <a id="ttup-tweetbtn" class="ttup-tweetbtn" onclick="get()" href="#">
                                                     <div>
                                                         <span>Tweet</span>
                                                     </div>
@@ -229,7 +228,7 @@
                                                 <div class="art-logo-container">
                                                     <a href="#" class="art-logo">
                                                         <img src="images/h-YEkUn1_normal.jpg" alt="logo1">
-                                                    </a>
+                                                    </a>    
                                                 </div>
                                                 <!-- remaining elements container -->
                                                 <div class="art-rest-container">
@@ -283,10 +282,10 @@
                                                                 <!-- like -->
                                                                 <div class="art-like">
                                                                     <div class="art-icon like-icon">
-                                                                        <i class="fal fa-heart "></i>
+                                                                        <i class="fal fa-heart"></i>
                                                                     </div>
                                                                     <div class="art-value like-value">
-                                                                        <span>776</span>
+                                                                        <span class="like-span">776</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -369,7 +368,7 @@
                                                                         <i class="fal fa-heart "></i>
                                                                     </div>
                                                                     <div class="art-value like-value">
-                                                                        <span>776</span>
+                                                                        <span class="like-span">776</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -565,7 +564,6 @@
             </div>
         </main>
     </div>
-    <script src="script.js"></script>
     <script src="input.js"></script>
 </body>
 </html>
