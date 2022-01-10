@@ -1,8 +1,8 @@
-/* v3.0
-9/1/22
-4:26pm
+/* v3.1
+10/1/22
+2:23am
 
-FINISHED
+FINISHED?!
 */
 
 @charset "UTF-8";
@@ -729,7 +729,7 @@ div.focus-container div.center-container{
     max-width: 598px;
     width: 598px;
     justify-content: center;
-    max-height: 1905px;
+    max-height: 1950px;
 }
 
  .center-content{
@@ -737,7 +737,7 @@ div.focus-container div.center-container{
     min-height: max-content;
     max-width: inherit;
     width: inherit;
-    max-height: 1905px;
+    max-height: 1950px;
     background-color: var(--white);
  }
 
