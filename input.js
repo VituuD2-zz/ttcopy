@@ -3,7 +3,7 @@ let accsett = document.querySelector('.acc-settings-container');
 let accswitch = document.querySelector('.acc-switcher-container');
 
 accsett.addEventListener('click', function() {
-    accswitch.classList.toggle('active');
+	accswitch.classList.toggle('active');
 });
 
 // TWEET BOX EFFECT
@@ -117,17 +117,3 @@ for (let i = 0; i < like_cont.length; i++){
         } 
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
